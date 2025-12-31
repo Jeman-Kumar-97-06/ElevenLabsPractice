@@ -4,7 +4,7 @@ import 'dotenv/config'
 
 const elevenlabs = new ElevenLabsClient();
 const audio      = await elevenlabs.textToSpeech.convert('JBFqnCBsd6RMkjVDRZzb',{
-    text:'The first mov is what sets everything in mtion. The second move is what sets everyting in un-motion',
+    text:'The first move is what sets everything in motion. The second move is what sets everyting in un-motion',
     modelId:'eleven_multilingual_v2',
     outputFormat:'mp3_44100_128'
 })
@@ -20,4 +20,5 @@ const stream = new Readable({
     }
   },
 });
+
 await play(stream);
